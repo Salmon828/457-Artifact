@@ -36,7 +36,7 @@ public class Elevator : MonoBehaviour
     void Update()
     {
 
-        if (UnityEngine.InputSystem.Keyboard.current.rKey.wasPressedThisFrame)
+        if (UnityEngine.InputSystem.Keyboard.current.tKey.wasPressedThisFrame)
         {
             isMoving = true;
             reverse = !reverse;
