@@ -6,6 +6,7 @@ TagManager:
   tags:
   - CinemachineTarget
   - canPickUp
+  - shard
   layers:
   - Default
   - TransparentFX

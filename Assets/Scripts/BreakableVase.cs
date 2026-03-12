@@ -34,6 +34,11 @@ public class BreakableVase : MonoBehaviour{
         hasBroken = true;
         // create the broken vase
         GameObject shards = Instantiate(brokenVase, transform.position, transform.rotation);
+        shards.tag = "shard"; // used in Potion.cs to make sure shards aren't recolored
+        foreach (Transform child in shards.transform)
+        {
+            child.tag = "shard";
+        }
 
         // Push shards away from center
         Rigidbody[] shardBodies = shards.GetComponentsInChildren<Rigidbody>();
