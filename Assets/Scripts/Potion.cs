@@ -1,4 +1,5 @@
 using NUnit.Framework;
+
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,10 +7,10 @@ public class Potion : MonoBehaviour
 {
     public Potions potionType = Potions.Bounce;
     public float effectRadius = 20;
-    public PhysicsMaterial bounceMaterial;
     public GameObject particleEffect;
-    public Material effectedObjectMaterial;
+    
     private bool isQuitting = false;
+    
     private void OnDestroy()
     {
         if (isQuitting && Application.isPlaying)
@@ -17,8 +18,6 @@ public class Potion : MonoBehaviour
             return;
         }
 
-        if (potionType == Potions.Bounce)
-        {
             List<GameObject> propsInRange = FindPropsInRadius(this.transform.position);
             foreach (GameObject obj in propsInRange)
             {
@@ -27,31 +26,27 @@ public class Potion : MonoBehaviour
                     // dont add any effects to shards from exploding breakable potion bottle
                     continue;
                 }
+                if (potionType == Potions.Bounce)
+                {
+                    // add bounce script
+                    obj.AddComponent<Bouncy>();
 
-                // add bounce script
-                obj.AddComponent<Bouncy>();
-
-                // Add custom physics material for bounciness and no friction
-                //Collider collider = obj.GetComponent<Collider>();
-                //collider.material = bounceMaterial;
-
-                // Change rigidbody settings to prevent going through walls and smooth out movement
-                Rigidbody rb = obj.GetComponent<Rigidbody>();
-                rb.interpolation = RigidbodyInterpolation.Interpolate;
-                rb.collisionDetectionMode = CollisionDetectionMode.Continuous;
-
-                // Apply slightly random upwards velocity to start bouncing
-                rb.linearVelocity = new Vector3(Random.Range(0, 20), 20, Random.Range(0, 20));
-
-                // Set object to red
-                obj.GetComponent<Renderer>().material = effectedObjectMaterial;
-                
+                } else if (potionType == Potions.Shrink){
+                    // add shrink script
+                    obj.AddComponent<Shrink>();
+                } else
+                {
+                    // add levitate script
+                    obj.AddComponent<Levitate>();
             }
-            // Play particle effect
-            ExplodeEffect();
-        }
-        
+            }
+
+        // Play particle effect
+        ExplodeEffect();
+
     }
+
+    
 
     private void OnApplicationQuit()
     {
@@ -90,6 +85,7 @@ public class Potion : MonoBehaviour
     public enum Potions
     {
         Bounce,
-        Levitation
+        Levitate,
+        Shrink
     }
 }

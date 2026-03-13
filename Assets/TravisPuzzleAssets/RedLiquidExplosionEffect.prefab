@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8643857933341559454}
   - component: {fileID: 7168044720192849460}
   m_Layer: 0
-  m_Name: LiquidExplosionEffect
+  m_Name: RedLiquidExplosionEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

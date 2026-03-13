@@ -32,8 +32,7 @@ public class Elevator : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
 
         if (UnityEngine.InputSystem.Keyboard.current.tKey.wasPressedThisFrame)
@@ -46,7 +45,7 @@ public class Elevator : MonoBehaviour
         {
             Vector3 currY = platform.transform.position;
             Vector3 targetY = reverse ? floor1Vec : floor2Vec;
-            platform.transform.position = Vector3.MoveTowards(currY, targetY, moveSpeed * Time.deltaTime);
+            platform.transform.position = Vector3.MoveTowards(currY, targetY, moveSpeed * Time.fixedDeltaTime);
         }
     }
 }
