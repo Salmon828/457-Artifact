@@ -11,25 +11,41 @@ public class Levitate : MonoBehaviour
     private Rigidbody rb;
     private Vector3 lastFrameVelocity;
     public float maxSpeed = 10f; // stop object from spazzing as bounce keeps multiplying speed
+    private MaterialManager materialManager;
+    private Elevator elevator;
 
     void Start() 
     {
         rb = GetComponent<Rigidbody>();
 
-        // Set object to new mat but store original material to reset later
-        originalMaterial = GetComponent<Renderer>().material;
-        GetComponent<Renderer>().material = Resources.Load<Material>("Travis/Levitate");
+        // Handle material change
+        if (!TryGetComponent<MaterialManager>(out materialManager))
+        {
+            materialManager = gameObject.AddComponent<MaterialManager>();
+        }
+        materialManager.AddEffect(Resources.Load<Material>("Travis/Levitate"), 1f);
 
+        // If levitate is attached to an elevator, trigger it to change floors
+        if (TryGetComponent<Elevator>(out elevator))
+        {
+            elevator.ToggleFloor();
+        }
+        
         StartCoroutine(undoLevitate());
     }
 
     private void FixedUpdate()
     {
-        // Apply a continuous force upwards
+        if (elevator != null)
+        {
+            return;
+        }
+
+        // Apply a continuous upward force
         rb.AddForce(Vector3.up * moveSpeed);
 
-        lastFrameVelocity = rb.linearVelocity;
         // limit object speed
+        lastFrameVelocity = rb.linearVelocity;
         if (rb.linearVelocity.magnitude > maxSpeed)
         {
             rb.linearVelocity = rb.linearVelocity.normalized * maxSpeed;
@@ -42,12 +58,16 @@ public class Levitate : MonoBehaviour
         // wait 
         yield return new WaitForSeconds(effectDuration);
 
+        if (elevator != null)
+        {
+            // lower elevator back down
+            elevator.ToggleFloor();
+        }
 
         // undo material change
-        GetComponent<Renderer>().material = originalMaterial;
+        materialManager.RemoveEffect(Resources.Load<Material>("Travis/Levitate"));
 
         // remove shrink script
         Destroy(GetComponent<Levitate>());
-
     }
 }

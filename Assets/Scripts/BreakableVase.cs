@@ -17,7 +17,8 @@ public class BreakableVase : MonoBehaviour{
     public bool useImpactPoint = true;
 
     private void OnCollisionEnter(Collision collision) {
-        if (hasBroken) return;
+        // ignore things which have already broken or that are on the potion layer
+        if (hasBroken || collision.gameObject.layer == LayerMask.NameToLayer("Potion")) return;
 
         if (collision.relativeVelocity.magnitude > breakForce) {
             Vector3 center = transform.position;

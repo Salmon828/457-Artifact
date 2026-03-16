@@ -8,9 +8,9 @@ public class Potion : MonoBehaviour
     public Potions potionType = Potions.Bounce;
     public float effectRadius = 20;
     public GameObject particleEffect;
-    
+
     private bool isQuitting = false;
-    
+
     private void OnDestroy()
     {
         if (isQuitting && Application.isPlaying)
@@ -18,35 +18,40 @@ public class Potion : MonoBehaviour
             return;
         }
 
-            List<GameObject> propsInRange = FindPropsInRadius(this.transform.position);
-            foreach (GameObject obj in propsInRange)
+        List<GameObject> propsInRange = FindPropsInRadius(this.transform.position);
+        foreach (GameObject obj in propsInRange)
+        {
+            if (obj.CompareTag("shard"))
             {
-                if (obj.CompareTag("shard"))
-                {
-                    // dont add any effects to shards from exploding breakable potion bottle
-                    continue;
-                }
-                if (potionType == Potions.Bounce)
-                {
-                    // add bounce script
-                    obj.AddComponent<Bouncy>();
+                // dont add any effects to shards from exploding breakable potion bottle
+                continue;
+            }
 
-                } else if (potionType == Potions.Shrink){
-                    // add shrink script
-                    obj.AddComponent<Shrink>();
-                } else
-                {
-                    // add levitate script
-                    obj.AddComponent<Levitate>();
+
+            if (potionType == Potions.Bounce)
+            {
+                // add bounce script
+                obj.AddComponent<Bouncy>();
+
             }
+            else if (potionType == Potions.Shrink)
+            {
+                // add shrink script
+                obj.AddComponent<Shrink>();
             }
+            else
+            {
+                // add levitate script
+                obj.AddComponent<Levitate>();
+            }
+        }
 
         // Play particle effect
         ExplodeEffect();
 
     }
 
-    
+
 
     private void OnApplicationQuit()
     {
@@ -62,8 +67,8 @@ public class Potion : MonoBehaviour
         // Iterate through the colliders and get their Rigidbodies
         foreach (Collider hitCollider in hitColliders)
         {
-            // Add to list if a Rigidbody is present on the object
-            if (hitCollider.TryGetComponent<Rigidbody>(out var rb))
+            // Add to list if a Rigidbody is present on the object or if its an elevator
+            if (hitCollider.TryGetComponent<Rigidbody>(out var rb) || hitCollider.TryGetComponent<Elevator>(out var e))
             {
                 propsInRange.Add(hitCollider.gameObject);
             }

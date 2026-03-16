@@ -32,20 +32,25 @@ public class Elevator : MonoBehaviour
         }
     }
 
-    void FixedUpdate()
+    public void ToggleFloor()
+    {
+        isMoving = true;
+        reverse = !reverse;
+    }
+
+    void Update()
     {
 
         if (UnityEngine.InputSystem.Keyboard.current.tKey.wasPressedThisFrame)
         {
-            isMoving = true;
-            reverse = !reverse;
+            ToggleFloor();
         }
 
         if (isMoving)
         {
             Vector3 currY = platform.transform.position;
             Vector3 targetY = reverse ? floor1Vec : floor2Vec;
-            platform.transform.position = Vector3.MoveTowards(currY, targetY, moveSpeed * Time.fixedDeltaTime);
+            platform.transform.position = Vector3.MoveTowards(currY, targetY, moveSpeed * Time.deltaTime);
         }
     }
 }

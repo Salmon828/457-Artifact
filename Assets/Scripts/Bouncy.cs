@@ -6,23 +6,33 @@ public class Bouncy : MonoBehaviour
     public float maxSpeed = 10f; // stop object from spazzing as bounce keeps multiplying speed
     public float minVelocity = 0.2f; // Prevents the ball from getting stuck in a slow roll
     public float effectDuration = 5f; // How long before object reverts
-    private Material originalMaterial;
+    //private Material originalMaterial;
 
+    private MaterialManager materialManager;
     private Rigidbody rb;
     private Vector3 lastFrameVelocity;
+    private Elevator elevator;
     void Start() 
     {
-        rb = GetComponent<Rigidbody>();
-        // Set object to red but store original material to reset later
-        originalMaterial = GetComponent<Renderer>().material;
-        GetComponent<Renderer>().material = Resources.Load<Material>("Travis/Bouncy");
+        if (TryGetComponent<Rigidbody>(out rb))
+        {
+            // Change rigidbody settings to prevent going through walls and smooth out movement
+            rb.interpolation = RigidbodyInterpolation.Interpolate;
+            rb.collisionDetectionMode = CollisionDetectionMode.Continuous;
 
-        // Change rigidbody settings to prevent going through walls and smooth out movement
-        rb.interpolation = RigidbodyInterpolation.Interpolate;
-        rb.collisionDetectionMode = CollisionDetectionMode.Continuous;
+            // Apply slightly random upwards velocity to start bouncing
+            rb.linearVelocity = new Vector3(Random.Range(0, 20), 20, Random.Range(0, 20));
+        }
 
-        // Apply slightly random upwards velocity to start bouncing
-        rb.linearVelocity = new Vector3(Random.Range(0, 20), 20, Random.Range(0, 20));
+        // Handle material changes
+        if (!TryGetComponent<MaterialManager>(out materialManager))
+        {
+            materialManager = gameObject.AddComponent<MaterialManager>();
+        }
+        materialManager.AddEffect(Resources.Load<Material>("Travis/Bouncy"), 1f);
+
+        // Ignore this effect if attached obj is an elevator
+        TryGetComponent<Elevator>(out elevator);
 
         StartCoroutine(undoBounce());
     }
@@ -31,26 +41,35 @@ public class Bouncy : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        // Get the contact normal
+        if (elevator != null)
+        {
+            return;
+        }
+
+        // Get contact normal
         Vector3 normal = collision.GetContact(0).normal;
 
        
-        // 3. Reflect the PRE-IMPACT velocity across the surface normal
+        // Reflect pre-impact velocity across surface normal
         var speed = lastFrameVelocity.magnitude;
         var direction = Vector3.Reflect(lastFrameVelocity.normalized, normal);
 
-        // 4. Apply boost and re-assign
-        // We calculate speed separately to ensure the direction stays clean
+        // Apply boost and re-assign
         float newSpeed = Mathf.Min(speed * bounceSpeedBoost, maxSpeed);
 
-        // Ensure we don't drop below a minimum speed to prevent "sticking"
+        // Don't drop below a minimum speed to prevent sticking / sliding
         rb.linearVelocity = direction * Mathf.Max(newSpeed, minVelocity);
     }
 
     void FixedUpdate()
     {
+        if (elevator != null)
+        {
+            return;
+        }
+
+        // limit object speed to prevent sticking / sliding
         lastFrameVelocity = rb.linearVelocity;
-        // limit object speed
         if (rb.linearVelocity.magnitude > maxSpeed)
         {
             rb.linearVelocity = rb.linearVelocity.normalized * maxSpeed;
@@ -62,13 +81,15 @@ public class Bouncy : MonoBehaviour
         // wait 
         yield return new WaitForSeconds(effectDuration);
 
-        // undo rigidbody changes
-        Rigidbody rb = GetComponent<Rigidbody>();
-        rb.interpolation = RigidbodyInterpolation.None;
-        rb.collisionDetectionMode = CollisionDetectionMode.Discrete;
+        if (elevator == null)
+        {
+            // undo rigidbody changes, but leave detection mode to continuous so obj doesn't fall thru floor
+            Rigidbody rb = GetComponent<Rigidbody>();
+            rb.interpolation = RigidbodyInterpolation.None;
+        }
 
         // undo material change
-        GetComponent<Renderer>().material = originalMaterial;
+        materialManager.RemoveEffect(Resources.Load<Material>("Travis/Bouncy"));
 
         // remove bounce script
         Destroy(GetComponent<Bouncy>());

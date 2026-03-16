@@ -34,13 +34,22 @@ public class PickUpScript : MonoBehaviour
             {
                 //perform raycast to check if player is looking at object within pickuprange
                 RaycastHit hit;
+                
                 if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, pickUpRange))
                 {
                     //make sure pickup tag is attached
                     if (hit.transform.gameObject.tag == "canPickUp")
                     {
+                        // If the object was a key, mark the key as held so it can be used to unlock doors
+                        if (hit.transform.gameObject.TryGetComponent<Key>(out var key))
+                        {
+                            key.setWasHeld(true);
+                        }
+
                         //pass in object hit into the PickUpObject function
                         PickUpObject(hit.transform.gameObject);
+
+                        
                     }
                 }
             }

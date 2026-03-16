@@ -5,20 +5,20 @@ public class Shrink : MonoBehaviour
     public float shrinkFactor = 0.5f; // 0.5 = half the size
     
     public float effectDuration = 5f; // How long before object reverts
-    private Material originalMaterial;
+    //private Material originalMaterial;
     private Vector3 originalScale; 
-    private Rigidbody rb;
+    private MaterialManager materialManager;
 
     void Start() 
     {
-        rb = GetComponent<Rigidbody>();
-        // Set object to new mat but store original material to reset later
-        originalMaterial = GetComponent<Renderer>().material;
-        GetComponent<Renderer>().material = Resources.Load<Material>("Travis/Shrink");
+        // Handle material changes
+        if (!TryGetComponent<MaterialManager>(out materialManager))
+        {
+            materialManager = gameObject.AddComponent<MaterialManager>();
+        }
 
-        // Shrink obj
-        originalScale = transform.localScale;
-        transform.localScale = originalScale * shrinkFactor;
+        // Shrink obj logic moved to materialManager to handle effect stacking
+        materialManager.AddEffect(Resources.Load<Material>("Travis/Shrink"), shrinkFactor);
 
         StartCoroutine(undoShrink());
     }
@@ -28,14 +28,10 @@ public class Shrink : MonoBehaviour
         // wait 
         yield return new WaitForSeconds(effectDuration);
 
-        // undo size change
-        transform.localScale = originalScale;
-
         // undo material change
-        GetComponent<Renderer>().material = originalMaterial;
+        materialManager.RemoveEffect(Resources.Load<Material>("Travis/Shrink"));
 
         // remove shrink script
         Destroy(GetComponent<Shrink>());
-
     }
 }
