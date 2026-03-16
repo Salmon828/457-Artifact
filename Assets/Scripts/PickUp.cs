@@ -78,6 +78,7 @@ public class PickUpScript : MonoBehaviour
             heldObjRb.constraints = RigidbodyConstraints.FreezeRotation;
             //make sure object doesnt collide with player, it can cause weird bugs
             Physics.IgnoreCollision(heldObj.GetComponent<Collider>(), player.GetComponent<Collider>(), true);
+            heldObjRb.interpolation = RigidbodyInterpolation.Interpolate; // smooth out movement of held objects (prevent jittering)
         }
     }
     void DropObject()
@@ -88,6 +89,7 @@ public class PickUpScript : MonoBehaviour
         heldObjRb.linearDamping = originalDrag;
         heldObjRb.constraints = originalConstraints;
         heldObj = null; //undefine game object
+        heldObjRb.interpolation = RigidbodyInterpolation.None;
     }
     void FixedUpdate()
     {
