@@ -29,13 +29,17 @@ public class Elevator : MonoBehaviour
         {
             isMoving = true;
             reverse = !reverse;
+            
         }
+
+        
     }
 
     public void ToggleFloor()
     {
         isMoving = true;
         reverse = !reverse;
+        
     }
 
     void Update()

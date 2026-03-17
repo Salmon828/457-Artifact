@@ -20,7 +20,8 @@ public class P2BarrelClick : MonoBehaviour
 
     void Update()
     {
-        if (Mouse.current.leftButton.wasPressedThisFrame)
+        // if (Mouse.current.leftButton.wasPressedThisFrame)
+        if(Keyboard.current.eKey.wasPressedThisFrame)
         {
             Ray r = playerCam.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
             RaycastHit hit;
