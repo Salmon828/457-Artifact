@@ -9,11 +9,15 @@ public class PickUpScript : MonoBehaviour
     public Transform holdPos;
     public float throwForce = 500f; //force at which the object is thrown at
     public float pickUpRange = 5f; //how far the player can pickup the object from
+    public float holdForce = 150f; //spring force pulling held object toward holdPos, how fast it snaps to the hold position
+    public float holdDamping = 15f; //damping applied to held object velocity to reduce oscillation
+    public float maxHoldDistance = 3f; //distance at which the grab is auto-released
     private float rotationSensitivity = 1f; //how fast/slow the object is rotated in relation to mouse movement
     private GameObject heldObj; //object which we pick up
     private Rigidbody heldObjRb; //rigidbody of object we pick up
     private bool canDrop = true; //this is needed so we don't throw/drop object when rotating the object
-    private int LayerNumber; //layer index
+    private float originalDrag; //stored drag value so we can restore it on drop
+    private RigidbodyConstraints originalConstraints; //stored constraints so we can restore them on drop
 
     //Reference to script which includes mouse movement of player (looking around)
     //we want to disable the player looking around when rotating the object
@@ -21,10 +25,7 @@ public class PickUpScript : MonoBehaviour
     //MouseLookScript mouseLookScript;
     void Start()
     {
-        //LayerNumber = LayerMask.NameToLayer("holdLayer"); Need to set up a new layer called holdLayer and assign it to the object you want to be able to pick up,
-        //this is so the object doesn't collide with walls
 
-        //mouseLookScript = player.GetComponent<MouseLookScript>();
     }
     void Update()
     {
@@ -64,7 +65,6 @@ public class PickUpScript : MonoBehaviour
         }
         if (heldObj != null) //if player is holding object
         {
-            MoveObject(); //keep object position at holdPos
             RotateObject();
             if (IsThrowPressed() && canDrop == true) //Mous0 (leftclick) is used to throw, change this if you want another button to be used)
             {
@@ -80,26 +80,42 @@ public class PickUpScript : MonoBehaviour
         {
             heldObj = pickUpObj; //assign heldObj to the object that was hit by the raycast (no longer == null)
             heldObjRb = pickUpObj.GetComponent<Rigidbody>(); //assign Rigidbody
-            heldObjRb.isKinematic = true;
-            heldObjRb.transform.parent = holdPos.transform; //parent object to holdposition
-            //heldObj.layer = LayerNumber; //change the object layer to the holdLayer
+            originalDrag = heldObjRb.linearDamping;
+            originalConstraints = heldObjRb.constraints;
+            heldObjRb.useGravity = false; //disable gravity so we don't have to fight it with force
+            heldObjRb.linearDamping = holdDamping; //use drag to dampen oscillation while held
+            heldObjRb.constraints = RigidbodyConstraints.FreezeRotation;
             //make sure object doesnt collide with player, it can cause weird bugs
             Physics.IgnoreCollision(heldObj.GetComponent<Collider>(), player.GetComponent<Collider>(), true);
+            heldObjRb.interpolation = RigidbodyInterpolation.Interpolate; // smooth out movement of held objects (prevent jittering)
         }
     }
     void DropObject()
     {
         //re-enable collision with player
         Physics.IgnoreCollision(heldObj.GetComponent<Collider>(), player.GetComponent<Collider>(), false);
-        //heldObj.layer = 0; //object assigned back to default layer
-        heldObjRb.isKinematic = false;
-        heldObj.transform.parent = null; //unparent object
+        heldObjRb.useGravity = true;
+        heldObjRb.linearDamping = originalDrag;
+        heldObjRb.constraints = originalConstraints;
         heldObj = null; //undefine game object
+        heldObjRb.interpolation = RigidbodyInterpolation.None;
     }
-    void MoveObject()
+    void FixedUpdate()
     {
-        //keep object position the same as the holdPosition position
-        heldObj.transform.position = holdPos.transform.position;
+        if (heldObj == null) return;
+
+        Vector3 toTarget = holdPos.position - heldObj.transform.position;
+        float distance = toTarget.magnitude;
+
+        //auto-release if the object is too far from the hold position (e.g. blocked by geometry)
+        if (distance > maxHoldDistance)
+        {
+            DropObject();
+            return;
+        }
+
+        //apply spring force toward holdPos; drag on the rigidbody handles damping
+        heldObjRb.AddForce(toTarget * holdForce);
     }
     void RotateObject()
     {
@@ -164,9 +180,9 @@ public class PickUpScript : MonoBehaviour
     {
         //same as drop function, but add force to object before undefining it
         Physics.IgnoreCollision(heldObj.GetComponent<Collider>(), player.GetComponent<Collider>(), false);
-        heldObj.layer = 0;
-        heldObjRb.isKinematic = false;
-        heldObj.transform.parent = null;
+        heldObjRb.useGravity = true;
+        heldObjRb.linearDamping = originalDrag;
+        heldObjRb.constraints = originalConstraints;
         heldObjRb.AddForce(transform.forward * throwForce);
         heldObj = null;
     }
