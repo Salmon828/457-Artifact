@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class Boss : MonoBehaviour
 {
+    public BackgroundMusicManager music; // for end of boss fight
     public Transform player;
     public float rotationSpeed = 5f;
     public bool smoothRotation = true;
@@ -133,7 +134,8 @@ public class Boss : MonoBehaviour
         deathTimer = 0f;
         isKnockedBack = false;
         animator.speed = 0f;
-
+        music.PlayCalmMusic(); // play calm music after boss is defeated
+        Debug.Log("CALM MUSIC STARTS BC BOSS DEAD");
         if (deathExplosionPrefab != null)
             Instantiate(deathExplosionPrefab, transform.position, Quaternion.identity);
     }

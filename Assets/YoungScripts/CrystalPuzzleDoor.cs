@@ -25,6 +25,8 @@ public class CrystalDoorInteractable : MonoBehaviour
     public Vector3 openRotation = new Vector3(0f, 90f, 0f);
     public float rotateSpeed = 2f;
 
+    public AudioSource unlockedSound; // door unlocking sound
+
     private bool isOpen = false;
     private Quaternion targetRotation;
 
@@ -74,6 +76,8 @@ public class CrystalDoorInteractable : MonoBehaviour
         {
             isOpen = true;
             ShowFeedback("The door unlocked.");
+            if(unlockedSound != null && unlockedSound.clip != null)
+                unlockedSound.Play();
 
             if (doorToRotate != null)
                 StartCoroutine(RotateDoorOpen());
