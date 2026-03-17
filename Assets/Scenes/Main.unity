@@ -74879,7 +74879,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Elevator
   moveDist: 3.75
-  moveSpeed: 2
+  moveSpeed: 1
 --- !u!65 &1977679748
 BoxCollider:
   m_ObjectHideFlags: 0
