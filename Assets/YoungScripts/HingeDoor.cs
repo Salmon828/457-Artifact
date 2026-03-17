@@ -29,5 +29,6 @@ public class HingedDoor : MonoBehaviour
     public void OpenDoor()
     {
         opening = true;
+        //doorSound.Play();
     }
 }

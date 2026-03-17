@@ -6,6 +6,8 @@ using UnityEngine.Events;
 public class Switch : MonoBehaviour
 {
     public GameObject lever;
+    public AudioSource pullSound; // for lever being pulled sound
+    public AudioSource rumbleSound; // stone rumbling sound effect (only on elevator)
 
     private bool playerInRange = false;
     public bool switchVal = false;
@@ -48,6 +50,12 @@ public class Switch : MonoBehaviour
 
 
         onLeverPull.Invoke();
+        pullSound.Play(); // lever sound
+        if(rumbleSound != null)
+        {
+            rumbleSound.Play(); // should only play when main elevator is moving
+        }
+
         if (spawner != null && switchVal)
         {
             spawner.GetComponent<RegenerateVase>().enabled = switchVal;

@@ -7,6 +7,9 @@ public class BreakableVase : MonoBehaviour{
     public float shardRemove = 4f; // Amount of time before deleting the shards of the broken vase
 
     public RegenerateVase spawner; // to create a new vase
+
+    public AudioSource breakSound;  // for vase/potion shattering sound
+
     private bool hasBroken = false;
 
     [Header("Shatter / Explosion")]
@@ -42,6 +45,15 @@ public class BreakableVase : MonoBehaviour{
         hasBroken = true;
         // create the broken vase
         GameObject shards = Instantiate(brokenVase, transform.position, transform.rotation);
+        
+        // play audio on shards (so they aren't immediately destroyed and stopped)
+        AudioSource shardAudio = shards.AddComponent<AudioSource>();
+        shardAudio.clip = breakSound.clip;
+        shardAudio.volume = 0.1f; //50% volume
+        shardAudio.spatialBlend = breakSound.spatialBlend;
+        shardAudio.Play();
+        
+        
         shards.tag = "shard"; // used in Potion.cs to make sure shards aren't recolored
         foreach (Transform child in shards.transform)
         {

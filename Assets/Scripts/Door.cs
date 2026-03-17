@@ -9,6 +9,7 @@ public class Door : MonoBehaviour
     public float openAngle = 90f;
     public float openSpeed = 2f;
     public bool openOnStart = false;
+    public AudioSource doorSound; // sound of door opening
     
     private bool isOpen = false;
     private Quaternion _closedRotation;
@@ -32,6 +33,7 @@ public class Door : MonoBehaviour
     {
         Quaternion targetRotation = isOpen ? _closedRotation : _openRotation;
         isOpen = !isOpen;
+        doorSound.Play();
 
         while (Quaternion.Angle(transform.rotation, targetRotation) > 0.01f)
         {
