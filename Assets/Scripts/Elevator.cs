@@ -4,7 +4,7 @@ using UnityEngine.InputSystem;
 
 public class Elevator : MonoBehaviour
 
-    
+
 {
     bool isMoving;
     bool reverse = true;
@@ -25,9 +25,10 @@ public class Elevator : MonoBehaviour
 
     void OnElevator(InputAction.CallbackContext callback)
     {
-        if (callback.performed) { 
-        isMoving = true;
-        reverse = !reverse;
+        if (callback.performed)
+        {
+            isMoving = true;
+            reverse = !reverse;
         }
     }
 
@@ -39,11 +40,6 @@ public class Elevator : MonoBehaviour
 
     void Update()
     {
-
-        if (UnityEngine.InputSystem.Keyboard.current.tKey.wasPressedThisFrame)
-        {
-            ToggleFloor();
-        }
 
         if (isMoving)
         {

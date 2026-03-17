@@ -15,17 +15,20 @@ public class Switch : MonoBehaviour
     private float pullAngle = 45f;
     private float pullSpeed = 2f;
     public GameObject spawner;
+    public UnityEvent onLeverPull;
 
     private void Start()
     {
-        _unpulledRotation = lever.transform.rotation;
-        _pulledRotation = Quaternion.Euler(lever.transform.eulerAngles + new Vector3(pullAngle, 0, 0));
+        _unpulledRotation = lever.transform.localRotation;
+
+        Quaternion offset = Quaternion.Euler(pullAngle, 0, 0);
+        _pulledRotation = _unpulledRotation * offset;
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Player")) 
-        { 
+        if (other.gameObject.CompareTag("Player"))
+        {
             playerInRange = true;
         }
     }
@@ -40,17 +43,23 @@ public class Switch : MonoBehaviour
 
     private IEnumerator ToggleSwitchCoroutine()
     {
-        Quaternion targetRotation = switchVal ? _unpulledRotation : _pulledRotation;
         switchVal = !switchVal;
+        Quaternion targetRotation = switchVal ? _pulledRotation : _unpulledRotation;
 
-        spawner.GetComponent<RegenerateVase>().enabled = switchVal;
-        while (Quaternion.Angle(lever.transform.rotation, targetRotation) > 0.01f)
+
+        onLeverPull.Invoke();
+        if (spawner != null && switchVal)
         {
-            lever.transform.rotation = Quaternion.Lerp(lever.transform.rotation, targetRotation, Time.deltaTime * pullSpeed);
+            spawner.GetComponent<RegenerateVase>().enabled = switchVal;
+        }
+
+        while (Quaternion.Angle(lever.transform.localRotation, targetRotation) > 0.01f)
+        {
+            lever.transform.localRotation = Quaternion.Lerp(lever.transform.localRotation, targetRotation, Time.deltaTime * pullSpeed);
             yield return null;
         }
 
-        lever.transform.rotation = targetRotation;
+        lever.transform.localRotation = targetRotation;
     }
 
 
