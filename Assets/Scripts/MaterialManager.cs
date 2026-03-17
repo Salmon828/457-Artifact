@@ -93,8 +93,13 @@ public class MaterialManager : MonoBehaviour
             }
             transform.localScale = targetScale;
         }
-        rb.WakeUp();
-        rb.MovePosition(transform.position);
+
+        if (rb != null)
+        {
+            rb.WakeUp();
+            rb.MovePosition(transform.position);
+        }
+        
     }
 
     private void Nudge(Vector3 targetScale)

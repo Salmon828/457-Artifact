@@ -30,7 +30,7 @@ public class Levitate : MonoBehaviour
         {
             elevator.ToggleFloor();
         }
-        
+
         StartCoroutine(undoLevitateCoroutine());
     }
 
