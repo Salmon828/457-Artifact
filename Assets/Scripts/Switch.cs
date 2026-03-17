@@ -44,13 +44,13 @@ public class Switch : MonoBehaviour
         switchVal = !switchVal;
 
         spawner.GetComponent<RegenerateVase>().enabled = switchVal;
-        while (Quaternion.Angle(transform.rotation, targetRotation) > 0.01f)
+        while (Quaternion.Angle(lever.transform.rotation, targetRotation) > 0.01f)
         {
             lever.transform.rotation = Quaternion.Lerp(lever.transform.rotation, targetRotation, Time.deltaTime * pullSpeed);
             yield return null;
         }
 
-        transform.rotation = targetRotation;
+        lever.transform.rotation = targetRotation;
     }
 
 
@@ -58,8 +58,10 @@ public class Switch : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if (UnityEngine.InputSystem.Keyboard.current.eKey.wasPressedThisFrame && playerInRange)
         {
+            StopAllCoroutines();
             StartCoroutine(ToggleSwitchCoroutine());
         }
     }

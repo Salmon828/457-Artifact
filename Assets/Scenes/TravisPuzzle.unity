@@ -3428,7 +3428,7 @@ MonoBehaviour:
   doorToRotate: {fileID: 847552943}
   openAngle: -90
   openSpeed: 2
-  openOnStart: 0
+  openOnStart: 1
 --- !u!65 &597137294
 BoxCollider:
   m_ObjectHideFlags: 0
