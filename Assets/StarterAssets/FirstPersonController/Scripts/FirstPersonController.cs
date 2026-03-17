@@ -64,9 +64,14 @@ namespace StarterAssets
 		private float _jumpTimeoutDelta;
 		private float _fallTimeoutDelta;
 
-	
+		// footstep system variables
+		public AudioClip footstepSound;
+		private AudioSource _audioSource;
+        private float _footstepTimer = 0;
+        public float footstepInterval = 0.5f; 
+
 #if ENABLE_INPUT_SYSTEM
-		private PlayerInput _playerInput;
+        private PlayerInput _playerInput;
 #endif
 		private CharacterController _controller;
 		private StarterAssetsInputs _input;
@@ -97,6 +102,7 @@ namespace StarterAssets
 
 		private void Start()
 		{
+			_audioSource = GetComponent<AudioSource>();
 			_controller = GetComponent<CharacterController>();
 			_input = GetComponent<StarterAssetsInputs>();
 #if ENABLE_INPUT_SYSTEM
@@ -196,7 +202,24 @@ namespace StarterAssets
 
 			// move the player
 			_controller.Move(inputDirection.normalized * (_speed * Time.deltaTime) + new Vector3(0.0f, _verticalVelocity, 0.0f) * Time.deltaTime);
-		}
+
+
+			// FOOTSTEP SYSTEM
+            if (Grounded && _input.move != Vector2.zero)
+            {
+                _footstepTimer -= Time.deltaTime;
+                if (_footstepTimer <= 0)
+                {
+                    PlayFootstepSound();
+                    // Speed up footsteps if sprinting
+                    _footstepTimer = _input.sprint ? footstepInterval * 0.7f : footstepInterval;
+                }
+            }
+            else
+            {
+                _footstepTimer = 0; // Reset so they step immediately when they start moving
+            }
+        }
 
 		private void JumpAndGravity()
 		{
@@ -263,6 +286,12 @@ namespace StarterAssets
 
 			// when selected, draw a gizmo in the position of, and matching radius of, the grounded collider
 			Gizmos.DrawSphere(new Vector3(transform.position.x, transform.position.y - GroundedOffset, transform.position.z), GroundedRadius);
+		}
+
+		private void PlayFootstepSound()
+		{
+			_audioSource.pitch = Random.Range(0.8f, 1f);
+			_audioSource.PlayOneShot(footstepSound);
 		}
 	}
 }
