@@ -39601,7 +39601,7 @@ MonoBehaviour:
   projectileInterval: 0.5
   projectileArcHeight: 10
   projectileTravelTime: 1.5
-  maxHealth: 1
+  maxHealth: 10
   healthBarFill: {fileID: 1883061857}
   deathSpinSpeed: 720
   deathSpinDuration: 3.5
