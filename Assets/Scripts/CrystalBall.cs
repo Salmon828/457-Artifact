@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class CrystalBall : MonoBehaviour
 {
+    public GameObject timelineToPlay; // assign in inspector, set to null if no timeline should play
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.name.Contains("EscapeBall")) {
@@ -30,6 +31,12 @@ public class CrystalBall : MonoBehaviour
             
             // Apply glow material to indiciate puzzle was solved
             materialManager.AddEffect(Resources.Load<Material>("Travis/GlowingOrb"), 1f);
+
+            // Play cutscene if assigned
+            if (timelineToPlay != null)
+            {
+                timelineToPlay.SetActive(true);
+            }
         }
     }
 }

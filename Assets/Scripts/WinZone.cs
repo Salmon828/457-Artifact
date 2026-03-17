@@ -17,7 +17,7 @@ public class WinZone : MonoBehaviour
     }
 
     private void OnTriggerEnter(Collider other) {
-        if (other.CompareTag("Player")) {
+        if (other.CompareTag("canPickUp")) {
             Debug.Log("You win!");
             winText.SetActive(true); // Show the win text
         }
