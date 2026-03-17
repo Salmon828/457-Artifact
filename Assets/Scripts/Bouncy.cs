@@ -6,7 +6,6 @@ public class Bouncy : MonoBehaviour
     public float maxSpeed = 10f; // stop object from spazzing as bounce keeps multiplying speed
     public float minVelocity = 0.2f; // Prevents the ball from getting stuck in a slow roll
     public float effectDuration = 5f; // How long before object reverts
-    //private Material originalMaterial;
 
     private MaterialManager materialManager;
     private Rigidbody rb;
@@ -41,6 +40,7 @@ public class Bouncy : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        // Ignore this effect if attached obj is an elevator
         if (elevator != null)
         {
             return;
@@ -63,6 +63,7 @@ public class Bouncy : MonoBehaviour
 
     void FixedUpdate()
     {
+        // Ignore this effect if attached obj is an elevator
         if (elevator != null)
         {
             return;
@@ -89,7 +90,7 @@ public class Bouncy : MonoBehaviour
         }
 
         // undo material change
-        materialManager.RemoveEffect(Resources.Load<Material>("Travis/Bouncy"));
+        materialManager.RemoveEffect(Resources.Load<Material>("Travis/Bouncy"), 1f);
 
         // remove bounce script
         Destroy(GetComponent<Bouncy>());

@@ -154,7 +154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 900ebef4c704cca45a9c02d80a5fd3de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BreakableVase
-  brokenVase: {fileID: 1735141636061881568, guid: 41b5c6d0a7a61aa46aaed666b4a7dcfc, type: 3}
+  brokenVase: {fileID: 5828513463353643445, guid: 41b5c6d0a7a61aa46aaed666b4a7dcfc, type: 3}
   breakForce: 2
   shardRemove: 1
   spawner: {fileID: 0}

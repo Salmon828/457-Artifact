@@ -14,7 +14,7 @@ public class Switch : MonoBehaviour
     private Coroutine _currentCorotune;
     private float pullAngle = 45f;
     private float pullSpeed = 2f;
-    public UnityEvent OnLeverPull;
+    public GameObject spawner;
 
     private void Start()
     {
@@ -27,7 +27,6 @@ public class Switch : MonoBehaviour
         if (other.gameObject.CompareTag("Player")) 
         { 
             playerInRange = true;
-            print("in range!");
         }
     }
     private void OnTriggerExit(Collider other)
@@ -35,17 +34,16 @@ public class Switch : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             playerInRange = false;
-            print("out of range!");
         }
     }
 
 
     private IEnumerator ToggleSwitchCoroutine()
     {
-        OnLeverPull.Invoke();
         Quaternion targetRotation = switchVal ? _unpulledRotation : _pulledRotation;
         switchVal = !switchVal;
 
+        spawner.GetComponent<RegenerateVase>().enabled = switchVal;
         while (Quaternion.Angle(transform.rotation, targetRotation) > 0.01f)
         {
             lever.transform.rotation = Quaternion.Lerp(lever.transform.rotation, targetRotation, Time.deltaTime * pullSpeed);

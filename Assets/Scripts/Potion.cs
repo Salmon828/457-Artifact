@@ -27,21 +27,18 @@ public class Potion : MonoBehaviour
                 continue;
             }
 
-
             if (potionType == Potions.Bounce)
             {
-                // add bounce script
+                
                 obj.AddComponent<Bouncy>();
 
             }
             else if (potionType == Potions.Shrink)
             {
-                // add shrink script
                 obj.AddComponent<Shrink>();
             }
             else
             {
-                // add levitate script
                 obj.AddComponent<Levitate>();
             }
         }

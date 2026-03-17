@@ -31,7 +31,7 @@ public class Levitate : MonoBehaviour
             elevator.ToggleFloor();
         }
         
-        StartCoroutine(undoLevitate());
+        StartCoroutine(undoLevitateCoroutine());
     }
 
     private void FixedUpdate()
@@ -53,7 +53,7 @@ public class Levitate : MonoBehaviour
     }
 
 
-    IEnumerator undoLevitate()
+    private IEnumerator undoLevitateCoroutine()
     {
         // wait 
         yield return new WaitForSeconds(effectDuration);
@@ -65,9 +65,11 @@ public class Levitate : MonoBehaviour
         }
 
         // undo material change
-        materialManager.RemoveEffect(Resources.Load<Material>("Travis/Levitate"));
+        materialManager.RemoveEffect(Resources.Load<Material>("Travis/Levitate"), 1f);
 
-        // remove shrink script
+        // remove levitate script
         Destroy(GetComponent<Levitate>());
     }
+
+
 }
