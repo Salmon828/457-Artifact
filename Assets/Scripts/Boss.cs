@@ -134,7 +134,7 @@ public class Boss : MonoBehaviour
         deathTimer = 0f;
         isKnockedBack = false;
         animator.speed = 0f;
-        music.PlayCalmMusic(); // play calm music after boss is defeated
+        StartCoroutine(PlayMusicDelayed(1f)); // play calm music after boss is defeated
         Debug.Log("CALM MUSIC STARTS BC BOSS DEAD");
         if (deathExplosionPrefab != null)
             Instantiate(deathExplosionPrefab, transform.position, Quaternion.identity);
@@ -314,6 +314,15 @@ public class Boss : MonoBehaviour
             proj.GetComponent<BossProjectile>().Launch(spawnPos, targetPos, projectileArcHeight, projectileTravelTime);
 
             yield return new WaitForSeconds(projectileInterval);
+        }
+    }
+
+    private IEnumerator PlayMusicDelayed(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        if (music != null)
+        {
+            music.PlayCalmMusicFade();
         }
     }
 
