@@ -1,7 +1,6 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.UI;
 
 public class CrystalPuzzleUI : MonoBehaviour
 {
@@ -11,13 +10,7 @@ public class CrystalPuzzleUI : MonoBehaviour
     public TextMeshProUGUI selectedLetterText;
 
     [Header("Puzzle Settings")]
-    public string targetWord = "ESCAPE";
-
-    private CrystalOrbInteractable currentOrb;
-    private int currentLetterIndex = 0;
-    private const string alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    private char[] selectedLetters;
-    private bool isOpen = false;
+    public string targetWord = "DEADLY";
 
     [Header("Orb Names")]
     public string[] orbNames = new string[]
@@ -29,6 +22,17 @@ public class CrystalPuzzleUI : MonoBehaviour
         "Lust",
         "Pride"
     };
+
+    [Header("Player Lock While Panel Is Open")]
+    public MonoBehaviour cameraLookScript;
+    public MonoBehaviour movementScript;
+    public PickUpScript pickUpScript;
+
+    private CrystalOrbInteractable currentOrb;
+    private int currentLetterIndex = 0;
+    private const string alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    private char[] selectedLetters;
+    private bool isOpen = false;
 
     private void Awake()
     {
@@ -50,6 +54,9 @@ public class CrystalPuzzleUI : MonoBehaviour
     private void Update()
     {
         if (!isOpen) return;
+
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
 
         bool closePressed = false;
 
@@ -83,6 +90,16 @@ public class CrystalPuzzleUI : MonoBehaviour
         RefreshUI();
 
         isOpen = true;
+
+        if (cameraLookScript != null)
+            cameraLookScript.enabled = false;
+
+        if (movementScript != null)
+            movementScript.enabled = false;
+
+        if (pickUpScript != null)
+            pickUpScript.enabled = false;
+
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
     }
@@ -95,25 +112,28 @@ public class CrystalPuzzleUI : MonoBehaviour
         currentOrb = null;
         isOpen = false;
 
+        if (cameraLookScript != null)
+            cameraLookScript.enabled = true;
+
+        if (movementScript != null)
+            movementScript.enabled = true;
+
+        if (pickUpScript != null)
+            pickUpScript.enabled = true;
+
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
 
     public void NextLetter()
     {
-        currentLetterIndex++;
-        if (currentLetterIndex >= alphabet.Length)
-            currentLetterIndex = 0;
-
+        currentLetterIndex = (currentLetterIndex + 1) % alphabet.Length;
         RefreshUI();
     }
 
     public void PreviousLetter()
     {
-        currentLetterIndex--;
-        if (currentLetterIndex < 0)
-            currentLetterIndex = alphabet.Length - 1;
-
+        currentLetterIndex = (currentLetterIndex - 1 + alphabet.Length) % alphabet.Length;
         RefreshUI();
     }
 

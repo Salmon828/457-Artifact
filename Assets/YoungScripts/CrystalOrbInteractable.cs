@@ -31,6 +31,9 @@ public class CrystalOrbInteractable : MonoBehaviour
             if (hitOrb == this && puzzleUI != null)
             {
                 puzzleUI.OpenPanel(this);
+                Cursor.visible = true;
+                // Unlock the cursor so it can move freely around the screen
+                Cursor.lockState = CursorLockMode.None;
             }
         }
     }
