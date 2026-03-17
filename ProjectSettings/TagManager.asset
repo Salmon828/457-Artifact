@@ -6,6 +6,7 @@ TagManager:
   tags:
   - CinemachineTarget
   - canPickUp
+  - shard
   - BrokenItem
   layers:
   - Default
@@ -14,7 +15,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Potion
   - 
   - 
   - 

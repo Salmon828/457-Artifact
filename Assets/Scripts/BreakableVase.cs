@@ -17,7 +17,8 @@ public class BreakableVase : MonoBehaviour{
     public bool useImpactPoint = true;
 
     private void OnCollisionEnter(Collision collision) {
-        if (hasBroken) return;
+        // ignore things which have already broken or that are on the potion layer
+        if (hasBroken || collision.gameObject.layer == LayerMask.NameToLayer("Potion")) return;
 
         if (collision.relativeVelocity.magnitude > breakForce) {
             Vector3 center = transform.position;
@@ -41,6 +42,11 @@ public class BreakableVase : MonoBehaviour{
         hasBroken = true;
         // create the broken vase
         GameObject shards = Instantiate(brokenVase, transform.position, transform.rotation);
+        shards.tag = "shard"; // used in Potion.cs to make sure shards aren't recolored
+        foreach (Transform child in shards.transform)
+        {
+            child.tag = "shard";
+        }
 
         // Push shards away from center
         Rigidbody[] shardBodies = shards.GetComponentsInChildren<Rigidbody>();

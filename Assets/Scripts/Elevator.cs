@@ -19,7 +19,6 @@ public class Elevator : MonoBehaviour
     void Start()
     {
         platform = this.gameObject;
-        //floor1Vec = new Vector3(platform.transform.position.x, floor1, platform.transform.position.z);
         floor1Vec = new Vector3(platform.transform.position.x, platform.transform.position.y, platform.transform.position.z);
         floor2Vec = new Vector3(platform.transform.position.x, platform.transform.position.y - moveDist, platform.transform.position.z);
     }
@@ -32,14 +31,18 @@ public class Elevator : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
+    public void ToggleFloor()
+    {
+        isMoving = true;
+        reverse = !reverse;
+    }
+
     void Update()
     {
 
         if (UnityEngine.InputSystem.Keyboard.current.tKey.wasPressedThisFrame)
         {
-            isMoving = true;
-            reverse = !reverse;
+            ToggleFloor();
         }
 
         if (isMoving)
