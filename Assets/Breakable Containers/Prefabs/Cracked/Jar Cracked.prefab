@@ -120,6 +120,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Jar Cracked
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e43ae9d139ef66d4fbafd1619fc9510c, type: 3}
+      propertyPath: m_TagString
+      value: BrokenItem
+      objectReference: {fileID: 0}
     - target: {fileID: 1977899489746696187, guid: e43ae9d139ef66d4fbafd1619fc9510c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

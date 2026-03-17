@@ -26,7 +26,14 @@ public class BreakableVase : MonoBehaviour{
                 center = collision.GetContact(0).point;
             }
             Break(center, collision.relativeVelocity);  // "break" vase
+            if (collision.gameObject.TryGetComponent<Boss>(out Boss boss)) {
+                boss.TakeDamage();
+            }
         }
+    }
+
+    public void BreakFromTrigger() {
+        Break(transform.position, Vector3.zero);
     }
 
     void Break(Vector3 explosionCenter, Vector3 impactVelocity) {
