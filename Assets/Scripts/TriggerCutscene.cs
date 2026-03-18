@@ -13,5 +13,6 @@ public class TriggerCutscene : MonoBehaviour
 
         _triggered = true;
         timeline.Play();
+
     }
 }

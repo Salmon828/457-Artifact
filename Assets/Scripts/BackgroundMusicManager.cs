@@ -13,6 +13,8 @@ public class BackgroundMusicManager : MonoBehaviour
     void Start()
     {
         PlayCalmMusic(); // Play calm music when scene starts
+        // MusicManager's audioSource needs have an empty AudioGenerator section
+        // so music plays at the start
     }
 
     public void PlayBossMusic()

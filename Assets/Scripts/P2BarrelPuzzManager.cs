@@ -5,6 +5,7 @@ public class P2BarrelPuzzManager : MonoBehaviour
     // Checks for correct sequence of barrels clicked
     public GameObject activationObject; // the thing that happens after solving the puzz
     public int[] correctSequence = {4, 5, 7};
+    public AudioSource cutsceneSound; // plays the puzzle solved jingle
     private int progress = 0;  // can't this be a bool???
 
     public void BarrelClicked(int barrelID)
@@ -30,6 +31,7 @@ public class P2BarrelPuzzManager : MonoBehaviour
     public void PuzzleSolvedProtocol()
     {
         activationObject.SetActive(true);
+        cutsceneSound.Play();
     }
 
 }

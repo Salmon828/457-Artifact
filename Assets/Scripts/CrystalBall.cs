@@ -3,6 +3,7 @@ using UnityEngine;
 public class CrystalBall : MonoBehaviour
 {
     public GameObject timelineToPlay; // assign in inspector, set to null if no timeline should play
+    public AudioSource cutsceneSound; // plays the puzzle solved jingle
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.name.Contains("EscapeBall")) {
@@ -31,6 +32,7 @@ public class CrystalBall : MonoBehaviour
             
             // Apply glow material to indiciate puzzle was solved
             materialManager.AddEffect(Resources.Load<Material>("Travis/GlowingOrb"), 1f);
+            cutsceneSound.Play();
 
             // Play cutscene if assigned
             if (timelineToPlay != null)
