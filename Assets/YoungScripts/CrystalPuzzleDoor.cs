@@ -12,7 +12,6 @@ public class CrystalDoorInteractable : MonoBehaviour
 
     [Header("References")]
     public CrystalPuzzleUI puzzleUI;
-    public NoteUI noteUI;
 
     [Header("Feedback")]
     public TextMeshProUGUI feedbackText;
@@ -42,7 +41,6 @@ public class CrystalDoorInteractable : MonoBehaviour
     private void Update()
     {
         if (isOpen) return;
-        if (noteUI != null && noteUI.IsOpen()) return;
         if (puzzleUI != null && puzzleUI.IsOpen()) return;
 
         bool interactPressed = false;

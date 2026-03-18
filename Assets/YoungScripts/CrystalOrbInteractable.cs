@@ -7,12 +7,10 @@ public class CrystalOrbInteractable : MonoBehaviour
     public float interactRange = 4f;
     public int orbIndex;
     public CrystalPuzzleUI puzzleUI;
-    public NoteUI noteUI;
 
     private void Update()
     {
         if (puzzleUI != null && puzzleUI.IsOpen()) return;
-        if (noteUI != null && noteUI.IsOpen()) return;
 
         bool interactPressed = false;
 
