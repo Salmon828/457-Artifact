@@ -1089,9 +1089,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7779381877309823848, guid: 2f6c4572e07a60b43b00e1c4f489a806, type: 3}
       insertIndex: -1
       addedObject: {fileID: 495251179}
-    - targetCorrespondingSourceObject: {fileID: 7779381877309823848, guid: 2f6c4572e07a60b43b00e1c4f489a806, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 495251183}
   m_SourcePrefab: {fileID: 100100000, guid: 2f6c4572e07a60b43b00e1c4f489a806, type: 3}
 --- !u!1001 &22115295
 PrefabInstance:
@@ -1382,10 +1379,6 @@ PrefabInstance:
       value: First book (1)
       objectReference: {fileID: 0}
     - target: {fileID: 4957231571477918332, guid: 92d4430c1aabefa4691079bac409cbf9, type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 4957231571477918332, guid: 92d4430c1aabefa4691079bac409cbf9, type: 3}
       propertyPath: m_TagString
       value: Untagged
       objectReference: {fileID: 0}
@@ -1447,9 +1440,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4957231571477918332, guid: 92d4430c1aabefa4691079bac409cbf9, type: 3}
       insertIndex: -1
       addedObject: {fileID: 26537090}
-    - targetCorrespondingSourceObject: {fileID: 4957231571477918332, guid: 92d4430c1aabefa4691079bac409cbf9, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 26537095}
   m_SourcePrefab: {fileID: 100100000, guid: 92d4430c1aabefa4691079bac409cbf9, type: 3}
 --- !u!4 &26537088 stripped
 Transform:
@@ -1504,21 +1494,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &26537095
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 26537089}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 878c4ccc9582e0940aa172f212c32eaa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::OpenItem
-  customMessage: 
-  isLocked: 0
-  unlockSound: {fileID: 0}
 --- !u!1001 &27096959
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1901,19 +1876,6 @@ MonoBehaviour:
   interactRange: 4
   orbIndex: 3
   puzzleUI: {fileID: 531665364}
---- !u!114 &32940590
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 32940584}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b44e90a26f098c47bdc1e0fb819ab46, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EnterItem
-  customMessage: 
 --- !u!114 &33330204
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5533,19 +5495,6 @@ MonoBehaviour:
   interactRange: 4
   orbIndex: 4
   puzzleUI: {fileID: 531665364}
---- !u!114 &131609009
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 131609003}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b44e90a26f098c47bdc1e0fb819ab46, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EnterItem
-  customMessage: 
 --- !u!1001 &136507681
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5852,10 +5801,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: book four
       objectReference: {fileID: 0}
-    - target: {fileID: 6098996794725213001, guid: 6353832c19eb9674b8143b16ab17c820, type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5863,9 +5808,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6098996794725213001, guid: 6353832c19eb9674b8143b16ab17c820, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1056176130}
-    - targetCorrespondingSourceObject: {fileID: 6098996794725213001, guid: 6353832c19eb9674b8143b16ab17c820, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1056176134}
   m_SourcePrefab: {fileID: 100100000, guid: 6353832c19eb9674b8143b16ab17c820, type: 3}
 --- !u!1001 &148762930
 PrefabInstance:
@@ -6862,19 +6804,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &177558054
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 177558050}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 22af362be20d3d243af3bea67d3908ec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PickupItem
-  customMessage: 
 --- !u!4 &177988011 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2317576605586290934, guid: 5adaedd4c0081614da171fecdf6bbd37, type: 3}
@@ -7561,21 +7490,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &199167629
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 199167622}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 878c4ccc9582e0940aa172f212c32eaa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::OpenItem
-  customMessage: 
-  isLocked: 0
-  unlockSound: {fileID: 0}
 --- !u!1001 &200144922
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8017,10 +7931,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Barrel_Small 9
       objectReference: {fileID: 0}
-    - target: {fileID: 5754540700685389711, guid: d4fdeae2fb6f5d245b9a6116920d503e, type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
     - target: {fileID: 5754540700685751215, guid: d4fdeae2fb6f5d245b9a6116920d503e, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.5
@@ -8083,9 +7993,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5754540700685389711, guid: d4fdeae2fb6f5d245b9a6116920d503e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1730123779}
-    - targetCorrespondingSourceObject: {fileID: 5754540700685389711, guid: d4fdeae2fb6f5d245b9a6116920d503e, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1730123784}
   m_SourcePrefab: {fileID: 100100000, guid: d4fdeae2fb6f5d245b9a6116920d503e, type: 3}
 --- !u!1001 &215664936
 PrefabInstance:
@@ -8865,19 +8772,6 @@ MonoBehaviour:
   interactRange: 4
   orbIndex: 0
   puzzleUI: {fileID: 531665364}
---- !u!114 &233239260
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 233239254}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b44e90a26f098c47bdc1e0fb819ab46, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EnterItem
-  customMessage: 
 --- !u!4 &235449518 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 370700119056002103, guid: b89b3b3efb3070240952a3335d270247, type: 3}
@@ -12111,10 +12005,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: CrystalBall Of Anger
       objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: f57cc7a1624e76443b185852b327936b, type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f57cc7a1624e76443b185852b327936b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -155.1268
@@ -12166,9 +12056,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: f57cc7a1624e76443b185852b327936b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 32940586}
-    - targetCorrespondingSourceObject: {fileID: 100000, guid: f57cc7a1624e76443b185852b327936b, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 32940590}
   m_SourcePrefab: {fileID: 100100000, guid: f57cc7a1624e76443b185852b327936b, type: 3}
 --- !u!1001 &322245394
 PrefabInstance:
@@ -12387,10 +12274,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Barrel_Small 6
       objectReference: {fileID: 0}
-    - target: {fileID: 5754540700685389711, guid: d4fdeae2fb6f5d245b9a6116920d503e, type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
     - target: {fileID: 5754540700685751215, guid: d4fdeae2fb6f5d245b9a6116920d503e, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.5
@@ -12453,9 +12336,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5754540700685389711, guid: d4fdeae2fb6f5d245b9a6116920d503e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1572033890}
-    - targetCorrespondingSourceObject: {fileID: 5754540700685389711, guid: d4fdeae2fb6f5d245b9a6116920d503e, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1572033895}
   m_SourcePrefab: {fileID: 100100000, guid: d4fdeae2fb6f5d245b9a6116920d503e, type: 3}
 --- !u!1001 &331305438
 PrefabInstance:
@@ -14746,10 +14626,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Switch
       objectReference: {fileID: 0}
-    - target: {fileID: 3403033971355921497, guid: 3a1dc3e054a222f48a2dd916be2f8b01, type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
     - target: {fileID: 4015297389894252497, guid: 3a1dc3e054a222f48a2dd916be2f8b01, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.97778314
@@ -14769,10 +14645,6 @@ PrefabInstance:
     - target: {fileID: 4015297389894252497, guid: 3a1dc3e054a222f48a2dd916be2f8b01, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: -24.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4391822310441708907, guid: 3a1dc3e054a222f48a2dd916be2f8b01, type: 3}
-      propertyPath: m_Layer
-      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4391822310441708907, guid: 3a1dc3e054a222f48a2dd916be2f8b01, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -14818,20 +14690,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7439421585645087795, guid: 3a1dc3e054a222f48a2dd916be2f8b01, type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 4686046836153891166, guid: 3a1dc3e054a222f48a2dd916be2f8b01, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1741330945}
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3403033971355921497, guid: 3a1dc3e054a222f48a2dd916be2f8b01, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1594939433}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a1dc3e054a222f48a2dd916be2f8b01, type: 3}
 --- !u!4 &374099007 stripped
 Transform:
@@ -15055,10 +14920,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Barrel_Small 4
       objectReference: {fileID: 0}
-    - target: {fileID: 5754540700685389711, guid: d4fdeae2fb6f5d245b9a6116920d503e, type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
     - target: {fileID: 5754540700685751215, guid: d4fdeae2fb6f5d245b9a6116920d503e, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.5
@@ -15121,9 +14982,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5754540700685389711, guid: d4fdeae2fb6f5d245b9a6116920d503e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1839448006}
-    - targetCorrespondingSourceObject: {fileID: 5754540700685389711, guid: d4fdeae2fb6f5d245b9a6116920d503e, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1839448011}
   m_SourcePrefab: {fileID: 100100000, guid: d4fdeae2fb6f5d245b9a6116920d503e, type: 3}
 --- !u!1001 &384755663
 PrefabInstance:
@@ -18419,19 +18277,6 @@ MonoBehaviour:
   interactRange: 4
   orbIndex: 2
   puzzleUI: {fileID: 531665364}
---- !u!114 &449913316
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 449913310}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b44e90a26f098c47bdc1e0fb819ab46, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EnterItem
-  customMessage: 
 --- !u!1 &449936941
 GameObject:
   m_ObjectHideFlags: 0
@@ -20295,104 +20140,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SlidingWall
   moveDistance: 5
   moveSpeed: 5
-  cutsceneSound: {fileID: 495251183}
---- !u!82 &495251183
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 495251177}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 4444ce557511fe343adc4e0b481d01e2, type: 3}
-  m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!1001 &495678381
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21410,10 +21157,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: CrystalBall Of Gluttony
       objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: f57cc7a1624e76443b185852b327936b, type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f57cc7a1624e76443b185852b327936b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -157.35681
@@ -21465,9 +21208,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: f57cc7a1624e76443b185852b327936b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 449913312}
-    - targetCorrespondingSourceObject: {fileID: 100000, guid: f57cc7a1624e76443b185852b327936b, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 449913316}
   m_SourcePrefab: {fileID: 100100000, guid: f57cc7a1624e76443b185852b327936b, type: 3}
 --- !u!4 &522351655 stripped
 Transform:
@@ -21734,7 +21474,6 @@ MonoBehaviour:
   cameraLookScript: {fileID: 1645033494}
   movementScript: {fileID: 935814014}
   pickUpScript: {fileID: 0}
-  doorPrompt: {fileID: 968226474}
 --- !u!1001 &533920101
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24204,20 +23943,6 @@ MonoBehaviour:
   barrelID: 7
   knockSound: {fileID: 596057611}
   interactDistance: 5
---- !u!114 &596057616
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 596057609}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a008096cb4eae914e897cabf81f5a5ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::BarrelItem
-  customMessage: 
-  barrelID: 0
 --- !u!1001 &597007956
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24551,11 +24276,6 @@ Transform:
 Transform:
   m_CorrespondingSourceObject: {fileID: 5981562312196831680, guid: 9219eeec429c86b459f29c67fd3e5e05, type: 3}
   m_PrefabInstance: {fileID: 753312735}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &607698675 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3403033971355921497, guid: 3a1dc3e054a222f48a2dd916be2f8b01, type: 3}
-  m_PrefabInstance: {fileID: 373638106}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &609644881
 PrefabInstance:
@@ -25593,10 +25313,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: CrystalBall Of Lust
       objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: f57cc7a1624e76443b185852b327936b, type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f57cc7a1624e76443b185852b327936b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -159.57681
@@ -25648,9 +25364,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: f57cc7a1624e76443b185852b327936b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1266014076}
-    - targetCorrespondingSourceObject: {fileID: 100000, guid: f57cc7a1624e76443b185852b327936b, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1266014080}
   m_SourcePrefab: {fileID: 100100000, guid: f57cc7a1624e76443b185852b327936b, type: 3}
 --- !u!4 &636046804 stripped
 Transform:
@@ -30716,10 +30429,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Barrel_Small 7
       objectReference: {fileID: 0}
-    - target: {fileID: 5754540700685389711, guid: d4fdeae2fb6f5d245b9a6116920d503e, type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
     - target: {fileID: 5754540700685751215, guid: d4fdeae2fb6f5d245b9a6116920d503e, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.5
@@ -30782,9 +30491,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5754540700685389711, guid: d4fdeae2fb6f5d245b9a6116920d503e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 596057611}
-    - targetCorrespondingSourceObject: {fileID: 5754540700685389711, guid: d4fdeae2fb6f5d245b9a6116920d503e, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 596057616}
   m_SourcePrefab: {fileID: 100100000, guid: d4fdeae2fb6f5d245b9a6116920d503e, type: 3}
 --- !u!1 &739531181
 GameObject:
@@ -33685,20 +33391,6 @@ MonoBehaviour:
   barrelID: 8
   knockSound: {fileID: 817068438}
   interactDistance: 5
---- !u!114 &817068443
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 817068436}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a008096cb4eae914e897cabf81f5a5ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::BarrelItem
-  customMessage: 
-  barrelID: 0
 --- !u!4 &817068569 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8707025466779033249, guid: bbd85e700f0f23546bfd0547bf83ad02, type: 3}
@@ -33964,20 +33656,6 @@ MonoBehaviour:
   barrelID: 2
   knockSound: {fileID: 823185605}
   interactDistance: 5
---- !u!114 &823185610
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 823185603}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a008096cb4eae914e897cabf81f5a5ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::BarrelItem
-  customMessage: 
-  barrelID: 0
 --- !u!1001 &824594125
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -37687,10 +37365,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: book six
       objectReference: {fileID: 0}
-    - target: {fileID: 6098996794725213001, guid: 6353832c19eb9674b8143b16ab17c820, type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -37698,9 +37372,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6098996794725213001, guid: 6353832c19eb9674b8143b16ab17c820, type: 3}
       insertIndex: -1
       addedObject: {fileID: 916136525}
-    - targetCorrespondingSourceObject: {fileID: 6098996794725213001, guid: 6353832c19eb9674b8143b16ab17c820, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 916136529}
   m_SourcePrefab: {fileID: 100100000, guid: 6353832c19eb9674b8143b16ab17c820, type: 3}
 --- !u!4 &916136523 stripped
 Transform:
@@ -37728,21 +37399,6 @@ MonoBehaviour:
   interactRange: 4
   noteUI: {fileID: 531665363}
   noteSprite: {fileID: 21300000, guid: 2f1c4579b1fd84c46906064fcc14fda9, type: 3}
---- !u!114 &916136529
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 916136524}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 878c4ccc9582e0940aa172f212c32eaa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::OpenItem
-  customMessage: 
-  isLocked: 0
-  unlockSound: {fileID: 0}
 --- !u!1 &918336634
 GameObject:
   m_ObjectHideFlags: 0
@@ -39803,118 +39459,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &968226474
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 968226464}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 878c4ccc9582e0940aa172f212c32eaa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::OpenItem
-  customMessage: 
-  isLocked: 1
-  unlockSound: {fileID: 968226475}
---- !u!82 &968226475
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 968226464}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 4444ce557511fe343adc4e0b481d01e2, type: 3}
-  m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!4 &968666421 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9127586027668500504, guid: 2f2ff5c103656c94ca51d5bbd62d1ca9, type: 3}
@@ -40819,10 +40363,6 @@ PrefabInstance:
       value: First book
       objectReference: {fileID: 0}
     - target: {fileID: 4957231571477918332, guid: 92d4430c1aabefa4691079bac409cbf9, type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 4957231571477918332, guid: 92d4430c1aabefa4691079bac409cbf9, type: 3}
       propertyPath: m_TagString
       value: Untagged
       objectReference: {fileID: 0}
@@ -40884,9 +40424,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4957231571477918332, guid: 92d4430c1aabefa4691079bac409cbf9, type: 3}
       insertIndex: -1
       addedObject: {fileID: 199167624}
-    - targetCorrespondingSourceObject: {fileID: 4957231571477918332, guid: 92d4430c1aabefa4691079bac409cbf9, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 199167629}
   m_SourcePrefab: {fileID: 100100000, guid: 92d4430c1aabefa4691079bac409cbf9, type: 3}
 --- !u!1001 &986255253
 PrefabInstance:
@@ -41240,10 +40777,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Door_Wooden_Right
       objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 3f84f8f63f2eb654891914d3c4f7cdbd, type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -41254,12 +40787,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3f84f8f63f2eb654891914d3c4f7cdbd, type: 3}
       insertIndex: -1
       addedObject: {fileID: 968226470}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3f84f8f63f2eb654891914d3c4f7cdbd, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 968226474}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3f84f8f63f2eb654891914d3c4f7cdbd, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 968226475}
   m_SourcePrefab: {fileID: 100100000, guid: 3f84f8f63f2eb654891914d3c4f7cdbd, type: 3}
 --- !u!1001 &999995597
 PrefabInstance:
@@ -46769,10 +46296,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Barrel_Small 8
       objectReference: {fileID: 0}
-    - target: {fileID: 5754540700685389711, guid: d4fdeae2fb6f5d245b9a6116920d503e, type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
     - target: {fileID: 5754540700685751215, guid: d4fdeae2fb6f5d245b9a6116920d503e, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.5
@@ -46835,9 +46358,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5754540700685389711, guid: d4fdeae2fb6f5d245b9a6116920d503e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 817068438}
-    - targetCorrespondingSourceObject: {fileID: 5754540700685389711, guid: d4fdeae2fb6f5d245b9a6116920d503e, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 817068443}
   m_SourcePrefab: {fileID: 100100000, guid: d4fdeae2fb6f5d245b9a6116920d503e, type: 3}
 --- !u!4 &1022418796 stripped
 Transform:
@@ -48168,21 +47688,6 @@ MonoBehaviour:
   interactRange: 4
   noteUI: {fileID: 531665363}
   noteSprite: {fileID: 21300000, guid: 26f9d36cc3350164883e1249f88b0661, type: 3}
---- !u!114 &1056176134
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1056176126}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 878c4ccc9582e0940aa172f212c32eaa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::OpenItem
-  customMessage: 
-  isLocked: 0
-  unlockSound: {fileID: 0}
 --- !u!1001 &1056259503
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -48655,39 +48160,14 @@ PrefabInstance:
       value: Key_Silver
       objectReference: {fileID: 0}
     - target: {fileID: 6728592063824181421, guid: ceef247e9aced74448199862672fc581, type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 6728592063824181421, guid: ceef247e9aced74448199862672fc581, type: 3}
       propertyPath: m_TagString
       value: canPickUp
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6728592063824181421, guid: ceef247e9aced74448199862672fc581, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1074175945}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ceef247e9aced74448199862672fc581, type: 3}
---- !u!1 &1074175939 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6728592063824181421, guid: ceef247e9aced74448199862672fc581, type: 3}
-  m_PrefabInstance: {fileID: 1073311859}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1074175945
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1074175939}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 22af362be20d3d243af3bea67d3908ec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PickupItem
-  customMessage: 
 --- !u!4 &1074550685 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9051238300485817969, guid: 2f6c4572e07a60b43b00e1c4f489a806, type: 3}
@@ -50163,19 +49643,6 @@ MonoBehaviour:
   interactRange: 4
   orbIndex: 5
   puzzleUI: {fileID: 531665364}
---- !u!114 &1123180788
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1123180782}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b44e90a26f098c47bdc1e0fb819ab46, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EnterItem
-  customMessage: 
 --- !u!1001 &1123328215
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -53167,20 +52634,6 @@ MonoBehaviour:
   barrelID: 5
   knockSound: {fileID: 1182208329}
   interactDistance: 5
---- !u!114 &1182208334
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1182208327}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a008096cb4eae914e897cabf81f5a5ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::BarrelItem
-  customMessage: 
-  barrelID: 0
 --- !u!1001 &1183328817
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -53704,15 +53157,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8997996947095583982, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 6.52
       objectReference: {fileID: 0}
     - target: {fileID: 8997996947095583982, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -7.93
       objectReference: {fileID: 0}
     - target: {fileID: 8997996947095583982, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 75.59
       objectReference: {fileID: 0}
     - target: {fileID: 8997996947095583982, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
       propertyPath: m_LocalRotation.w
@@ -54677,10 +54130,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: book four (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 6098996794725213001, guid: 6353832c19eb9674b8143b16ab17c820, type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -54688,9 +54137,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6098996794725213001, guid: 6353832c19eb9674b8143b16ab17c820, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1210265425}
-    - targetCorrespondingSourceObject: {fileID: 6098996794725213001, guid: 6353832c19eb9674b8143b16ab17c820, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1210265429}
   m_SourcePrefab: {fileID: 100100000, guid: 6353832c19eb9674b8143b16ab17c820, type: 3}
 --- !u!4 &1210265423 stripped
 Transform:
@@ -54718,21 +54164,6 @@ MonoBehaviour:
   interactRange: 4
   noteUI: {fileID: 531665363}
   noteSprite: {fileID: 21300000, guid: 6f533a336c6467e468ee86dc0adba33c, type: 3}
---- !u!114 &1210265429
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1210265424}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 878c4ccc9582e0940aa172f212c32eaa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::OpenItem
-  customMessage: 
-  isLocked: 0
-  unlockSound: {fileID: 0}
 --- !u!1001 &1213640323
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -56193,15 +55624,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9005220659476430818, guid: 2d3a85ecde41a8246a79669975912b74, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 6.52
       objectReference: {fileID: 0}
     - target: {fileID: 9005220659476430818, guid: 2d3a85ecde41a8246a79669975912b74, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.375
+      value: -6.555
       objectReference: {fileID: 0}
     - target: {fileID: 9005220659476430818, guid: 2d3a85ecde41a8246a79669975912b74, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 75.59
       objectReference: {fileID: 0}
     - target: {fileID: 9005220659476430818, guid: 2d3a85ecde41a8246a79669975912b74, type: 3}
       propertyPath: m_LocalRotation.w
@@ -56680,19 +56111,6 @@ MonoBehaviour:
   interactRange: 4
   orbIndex: 1
   puzzleUI: {fileID: 531665364}
---- !u!114 &1266014080
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1266014074}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b44e90a26f098c47bdc1e0fb819ab46, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EnterItem
-  customMessage: 
 --- !u!1001 &1266688731
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -58085,9 +57503,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4514716565785830676, guid: 52cfc34cb5ec6b84bb03dc381684a09a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 177558052}
-    - targetCorrespondingSourceObject: {fileID: 4514716565785830676, guid: 52cfc34cb5ec6b84bb03dc381684a09a, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 177558054}
   m_SourcePrefab: {fileID: 100100000, guid: 52cfc34cb5ec6b84bb03dc381684a09a, type: 3}
 --- !u!1001 &1289215761
 PrefabInstance:
@@ -59722,20 +59137,6 @@ MonoBehaviour:
   barrelID: 1
   knockSound: {fileID: 1326645905}
   interactDistance: 5
---- !u!114 &1326645910
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1326645903}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a008096cb4eae914e897cabf81f5a5ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::BarrelItem
-  customMessage: 
-  barrelID: 0
 --- !u!4 &1327732915 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3875462458774534196, guid: f70ad1fd5f3819b42aaeca6741dfa8c2, type: 3}
@@ -61356,10 +60757,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Barrel_Small 3
       objectReference: {fileID: 0}
-    - target: {fileID: 5754540700685389711, guid: d4fdeae2fb6f5d245b9a6116920d503e, type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
     - target: {fileID: 5754540700685751215, guid: d4fdeae2fb6f5d245b9a6116920d503e, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.5
@@ -61422,9 +60819,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5754540700685389711, guid: d4fdeae2fb6f5d245b9a6116920d503e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1993311025}
-    - targetCorrespondingSourceObject: {fileID: 5754540700685389711, guid: d4fdeae2fb6f5d245b9a6116920d503e, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1993311030}
   m_SourcePrefab: {fileID: 100100000, guid: d4fdeae2fb6f5d245b9a6116920d503e, type: 3}
 --- !u!114 &1366622789
 MonoBehaviour:
@@ -69747,10 +69141,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: CrystalBall Of Sloth
       objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: f57cc7a1624e76443b185852b327936b, type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f57cc7a1624e76443b185852b327936b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -161.71681
@@ -69802,9 +69192,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: f57cc7a1624e76443b185852b327936b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 233239256}
-    - targetCorrespondingSourceObject: {fileID: 100000, guid: f57cc7a1624e76443b185852b327936b, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 233239260}
   m_SourcePrefab: {fileID: 100100000, guid: f57cc7a1624e76443b185852b327936b, type: 3}
 --- !u!1001 &1456844697
 PrefabInstance:
@@ -71676,10 +71063,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4686046836153891166, guid: 3a1dc3e054a222f48a2dd916be2f8b01, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1431789138}
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3403033971355921497, guid: 3a1dc3e054a222f48a2dd916be2f8b01, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1750860966}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a1dc3e054a222f48a2dd916be2f8b01, type: 3}
 --- !u!1001 &1497763451
 PrefabInstance:
@@ -73789,20 +73173,6 @@ MonoBehaviour:
   barrelID: 6
   knockSound: {fileID: 1572033890}
   interactDistance: 5
---- !u!114 &1572033895
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1572033888}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a008096cb4eae914e897cabf81f5a5ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::BarrelItem
-  customMessage: 
-  barrelID: 0
 --- !u!1001 &1572167958
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -74220,19 +73590,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4686046836153891166, guid: 3a1dc3e054a222f48a2dd916be2f8b01, type: 3}
   m_PrefabInstance: {fileID: 373638106}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1594939433
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 607698675}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 22af362be20d3d243af3bea67d3908ec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PickupItem
-  customMessage: Press E to activate
 --- !u!1001 &1596080011
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -75353,10 +74710,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Barrel_Small 2
       objectReference: {fileID: 0}
-    - target: {fileID: 5754540700685389711, guid: d4fdeae2fb6f5d245b9a6116920d503e, type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
     - target: {fileID: 5754540700685751215, guid: d4fdeae2fb6f5d245b9a6116920d503e, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.5
@@ -75419,9 +74772,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5754540700685389711, guid: d4fdeae2fb6f5d245b9a6116920d503e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 823185605}
-    - targetCorrespondingSourceObject: {fileID: 5754540700685389711, guid: d4fdeae2fb6f5d245b9a6116920d503e, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 823185610}
   m_SourcePrefab: {fileID: 100100000, guid: d4fdeae2fb6f5d245b9a6116920d503e, type: 3}
 --- !u!1001 &1636590243
 PrefabInstance:
@@ -77849,10 +77199,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: CrystalBall Of Envy
       objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: f57cc7a1624e76443b185852b327936b, type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f57cc7a1624e76443b185852b327936b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -152.76682
@@ -77904,9 +77250,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: f57cc7a1624e76443b185852b327936b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 131609005}
-    - targetCorrespondingSourceObject: {fileID: 100000, guid: f57cc7a1624e76443b185852b327936b, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 131609009}
   m_SourcePrefab: {fileID: 100100000, guid: f57cc7a1624e76443b185852b327936b, type: 3}
 --- !u!4 &1700187671 stripped
 Transform:
@@ -79193,20 +78536,6 @@ MonoBehaviour:
   barrelID: 9
   knockSound: {fileID: 1730123779}
   interactDistance: 5
---- !u!114 &1730123784
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1730123777}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a008096cb4eae914e897cabf81f5a5ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::BarrelItem
-  customMessage: 
-  barrelID: 0
 --- !u!1001 &1730633369
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -79307,10 +78636,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Barrel_Small 1
       objectReference: {fileID: 0}
-    - target: {fileID: 5754540700685389711, guid: d4fdeae2fb6f5d245b9a6116920d503e, type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
     - target: {fileID: 5754540700685751215, guid: d4fdeae2fb6f5d245b9a6116920d503e, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.5
@@ -79373,9 +78698,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5754540700685389711, guid: d4fdeae2fb6f5d245b9a6116920d503e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1326645905}
-    - targetCorrespondingSourceObject: {fileID: 5754540700685389711, guid: d4fdeae2fb6f5d245b9a6116920d503e, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1326645910}
   m_SourcePrefab: {fileID: 100100000, guid: d4fdeae2fb6f5d245b9a6116920d503e, type: 3}
 --- !u!1001 &1736778775
 PrefabInstance:
@@ -79709,7 +79031,7 @@ GameObject:
   - component: {fileID: 1741330947}
   - component: {fileID: 1741330946}
   - component: {fileID: 1741330948}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: SwitchTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -80225,19 +79547,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3403033971355921497, guid: 3a1dc3e054a222f48a2dd916be2f8b01, type: 3}
   m_PrefabInstance: {fileID: 1497343263}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1750860966
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1750860965}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 22af362be20d3d243af3bea67d3908ec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PickupItem
-  customMessage: Press E to activate
 --- !u!4 &1751031003 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5376073837650197851, guid: dce278a18cc98aa41a4185c95e564f6f, type: 3}
@@ -83891,20 +83200,6 @@ MonoBehaviour:
   barrelID: 4
   knockSound: {fileID: 1839448006}
   interactDistance: 5
---- !u!114 &1839448011
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1839448004}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a008096cb4eae914e897cabf81f5a5ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::BarrelItem
-  customMessage: 
-  barrelID: 0
 --- !u!4 &1842764446 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1676609100239073865, guid: 0d780173c250d334f80c9061373c8e4f, type: 3}
@@ -84390,10 +83685,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: CrystalBall Of Pride
       objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: f57cc7a1624e76443b185852b327936b, type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f57cc7a1624e76443b185852b327936b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -150.5968
@@ -84445,9 +83736,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: f57cc7a1624e76443b185852b327936b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1123180784}
-    - targetCorrespondingSourceObject: {fileID: 100000, guid: f57cc7a1624e76443b185852b327936b, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1123180788}
   m_SourcePrefab: {fileID: 100100000, guid: f57cc7a1624e76443b185852b327936b, type: 3}
 --- !u!1001 &1867167744
 PrefabInstance:
@@ -85011,10 +84299,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Barrel_Small 5
       objectReference: {fileID: 0}
-    - target: {fileID: 5754540700685389711, guid: d4fdeae2fb6f5d245b9a6116920d503e, type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
     - target: {fileID: 5754540700685751215, guid: d4fdeae2fb6f5d245b9a6116920d503e, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.5
@@ -85077,9 +84361,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5754540700685389711, guid: d4fdeae2fb6f5d245b9a6116920d503e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1182208329}
-    - targetCorrespondingSourceObject: {fileID: 5754540700685389711, guid: d4fdeae2fb6f5d245b9a6116920d503e, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1182208334}
   m_SourcePrefab: {fileID: 100100000, guid: d4fdeae2fb6f5d245b9a6116920d503e, type: 3}
 --- !u!1001 &1886369832
 PrefabInstance:
@@ -89743,15 +89024,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8762286023885395322, guid: 9c489a8547f4d9e4387da15a4ff82c81, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 6.52
       objectReference: {fileID: 0}
     - target: {fileID: 8762286023885395322, guid: 9c489a8547f4d9e4387da15a4ff82c81, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.375
+      value: -6.555
       objectReference: {fileID: 0}
     - target: {fileID: 8762286023885395322, guid: 9c489a8547f4d9e4387da15a4ff82c81, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 75.59
       objectReference: {fileID: 0}
     - target: {fileID: 8762286023885395322, guid: 9c489a8547f4d9e4387da15a4ff82c81, type: 3}
       propertyPath: m_LocalRotation.w
@@ -90045,20 +89326,6 @@ MonoBehaviour:
   barrelID: 3
   knockSound: {fileID: 1993311025}
   interactDistance: 5
---- !u!114 &1993311030
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1993311023}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a008096cb4eae914e897cabf81f5a5ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::BarrelItem
-  customMessage: 
-  barrelID: 0
 --- !u!1001 &1994440530
 PrefabInstance:
   m_ObjectHideFlags: 0

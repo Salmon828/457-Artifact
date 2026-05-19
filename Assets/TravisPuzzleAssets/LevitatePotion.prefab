@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: -8522824226659215442}
   - component: {fileID: -2636100646697978616}
   - component: {fileID: 6349480690899524126}
+  - component: {fileID: -1023422691318331785}
   m_Layer: 6
   m_Name: LevitatePotion
   m_TagString: canPickUp
@@ -277,3 +278,16 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &-1023422691318331785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 712337606758504850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22af362be20d3d243af3bea67d3908ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PickupItem
+  customMessage: 

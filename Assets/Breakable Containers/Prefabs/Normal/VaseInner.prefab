@@ -8,6 +8,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -9152863303529785188, guid: 792684e29b604e74aad171ed46a60648, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 792684e29b604e74aad171ed46a60648, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.68
@@ -64,13 +68,57 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -6124858170955094670, guid: 792684e29b604e74aad171ed46a60648, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: -592981754604737630, guid: 792684e29b604e74aad171ed46a60648, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 98711950272329592, guid: 792684e29b604e74aad171ed46a60648, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 117214286460000749, guid: 792684e29b604e74aad171ed46a60648, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 117214286460000749, guid: 792684e29b604e74aad171ed46a60648, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 792684e29b604e74aad171ed46a60648, type: 3}
       propertyPath: m_Name
       value: VaseInner
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 792684e29b604e74aad171ed46a60648, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 792684e29b604e74aad171ed46a60648, type: 3}
       propertyPath: m_TagString
       value: canPickUp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2074196654182488904, guid: 792684e29b604e74aad171ed46a60648, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4424396828587804706, guid: 792684e29b604e74aad171ed46a60648, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 5233112405309087440, guid: 792684e29b604e74aad171ed46a60648, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 5233112405309087440, guid: 792684e29b604e74aad171ed46a60648, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8582293574316785276, guid: 792684e29b604e74aad171ed46a60648, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -85,6 +133,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 792684e29b604e74aad171ed46a60648, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3475662796162126806}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 792684e29b604e74aad171ed46a60648, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -7979597180724840325}
   m_SourcePrefab: {fileID: 100100000, guid: 792684e29b604e74aad171ed46a60648, type: 3}
 --- !u!1 &5833639561627470262 stripped
 GameObject:
@@ -161,3 +212,16 @@ MonoBehaviour:
   upwardModifier: 0
   randomTorque: 10
   useImpactPoint: 1
+--- !u!114 &-7979597180724840325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5833639561627470262}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22af362be20d3d243af3bea67d3908ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PickupItem
+  customMessage: 

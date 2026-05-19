@@ -28,6 +28,8 @@ public class CrystalPuzzleUI : MonoBehaviour
     public MonoBehaviour movementScript;
     public PickUpScript pickUpScript;
 
+    public OpenItem doorPrompt;
+
     private CrystalOrbInteractable currentOrb;
     private int currentLetterIndex = 0;
     private const string alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -143,6 +145,12 @@ public class CrystalPuzzleUI : MonoBehaviour
 
         char chosen = alphabet[currentLetterIndex];
         SetLetter(currentOrb.orbIndex, chosen);
+
+        if (IsCorrectWord())
+        {
+            if (doorPrompt != null)
+                doorPrompt.Unlock();
+        }
         ClosePanel();
     }
 

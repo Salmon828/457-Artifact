@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 7536987458320548020}
   - component: {fileID: -6312856487362563260}
   - component: {fileID: 5276536638818684431}
+  - component: {fileID: -6305796811186809077}
   m_Layer: 6
   m_Name: BouncePotion
   m_TagString: canPickUp
@@ -277,3 +278,16 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &-6305796811186809077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4905267119895552983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22af362be20d3d243af3bea67d3908ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PickupItem
+  customMessage: 

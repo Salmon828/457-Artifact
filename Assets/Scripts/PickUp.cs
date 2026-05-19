@@ -167,6 +167,11 @@ public class PickUpScript : MonoBehaviour
         return Input.GetKey(KeyCode.R);
     }
 
+    public bool IsHoldingObject()
+    {
+        return heldObj != null;
+    }
+
     private Vector2 GetMouseDelta()
     {
         if (Mouse.current != null)

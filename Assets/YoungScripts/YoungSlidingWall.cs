@@ -8,6 +8,8 @@ public class YoungSlidingWall : MonoBehaviour
     private Vector3 targetPos;
     private bool opening = false;
 
+    public AudioSource cutsceneSound;
+
     private void Start()
     {
         targetPos = transform.position + Vector3.down * moveDistance;
@@ -28,5 +30,6 @@ public class YoungSlidingWall : MonoBehaviour
     {
         Debug.Log("OpenWall called");
         opening = true;
+        cutsceneSound.Play();
     }
 }
