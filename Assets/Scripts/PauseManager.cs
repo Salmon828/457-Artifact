@@ -1,0 +1,55 @@
+using UnityEngine;
+using UnityEngine.InputSystem;
+
+// Handles pausing and unpausing the game, as well as showing and hiding the pause menu.
+public class PauseManager : MonoBehaviour
+{
+    [SerializeField] private GameObject pauseMenu; // Reference to the pause menu UI
+    [SerializeField] private SettingsMenu sMenu;
+
+    void OnEnable()
+    {
+         sMenu.OnClosed += UnpauseGame; // Subscribe to the OnClosed event when the script is enabled
+    }
+
+    void OnDisable()
+    {
+        sMenu.OnClosed -= UnpauseGame; // Unsubscribe from the OnClosed event when the script is disabled
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (Keyboard.current == null) return; // Ensure that the keyboard is available before checking for input, change this if you want to support other input devices like gamepads
+        if (Application.isPlaying && pauseMenu != null)
+        {
+            if (Keyboard.current.escapeKey.wasPressedThisFrame)
+            {
+                if (pauseMenu.activeInHierarchy)
+                {
+                    UnpauseGame();
+                }
+                else
+                {
+                    PauseGame();
+                }
+            }
+        }
+    }
+
+    void PauseGame()
+    {
+        Time.timeScale = 0f;
+        pauseMenu.SetActive(true);
+        Cursor.lockState = CursorLockMode.None; // Unlock the cursor when paused
+        Cursor.visible = true; // Show the cursor when paused
+    }
+
+    void UnpauseGame()
+    {
+        Time.timeScale = 1f;
+        pauseMenu.SetActive(false);
+        Cursor.lockState = CursorLockMode.Locked; // Lock the cursor when unpaused
+        Cursor.visible = false;
+    }
+}
