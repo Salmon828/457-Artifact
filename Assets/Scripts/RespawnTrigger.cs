@@ -23,7 +23,10 @@ public class RespawnTrigger : MonoBehaviour
                 cc.enabled = false;
                 other.transform.position = respawnPoint.position;
                 cc.enabled = true;
-                boss.ResetPosition();
+                if (boss != null)
+                {
+                    boss.ResetPosition();
+                }
             }
         }
     }

@@ -11,7 +11,7 @@ public class RegenerateVase : MonoBehaviour {
     private float respawnEffectDuration = 0f;
 
     [Tooltip("How early the vase appears before the effect ends. Tuned by feel.")]
-    [SerializeField] private float spawnLeadTime = 0.3f; 
+    [SerializeField] private float spawnLeadTime = 0f; 
 
     private bool isRespawning = false;
 
